@@ -77,8 +77,43 @@
             font-weight: lighter;
         }
 
-    </style>
+        /* Featured Products Section */
+        .featured-products {
+            width: 100%;
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+        }
 
+        .featured-products h3 {
+            color: #ff00ff;
+            font-size: 28px;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 1);
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -95,6 +130,22 @@
     <div class="container a">
         <h2>Welcome to the Last Sing Standing</h2>
         <p>We offer a wide selection of premium Liquors and experiences. Last Sing Standing is King.</p>
+    </div>
+
+    <!-- Featured Products Section -->
+    <div class="featured-products">
+        <h3>Featured Products</h3>
+        <div class="product-grid">
+            <div class="product">
+                <img src=""D:\Moulic, John Royce 2-D\a8de9034ccaedb83987abc446083696f.jpg"" alt="Product 1">
+            </div>
+            <div class="product">
+                <img src=""D:\Moulic, John Royce 2-D\california-wines-hahn-xl-wine0916-bf58bff5120a47b9abb29273dadb591f.jpg"" alt="Product 2">
+            </div>
+            <div class="product">
+                <img src=""D:\Moulic, John Royce 2-D\vino-rosso-olek-bondonio-cascina-la-berchialla.jpg"" alt="Product 3">
+            </div>
+        </div>
     </div>
 
 </body>
