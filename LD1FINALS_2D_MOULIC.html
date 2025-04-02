@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 300px; margin: auto; padding: 20px; }
+        .hidden { display: none; }
+    </style>
+    <link rel="stylesheet" href="LAST_SING_STANDING_STYLES.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+    <button onclick="login()">Login</button>
+    <p id="message" class="hidden"></p>
+</div>
+
+<script>
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("message");
+
+        
+        const correctUsername = "Moulic";
+        const correctPassword = "BSIT2D";
+
+
+        if (username === correctUsername && password === correctPassword) {
+            window.location.href = "LAST_SING_STANDING.html"; 
+        } else {
+            alert('Wrong Username or Password');
+            message.classList.remove("hidden");
+            message.textContent = "Wrong username or password. Start countdown 10.";
+            countdown(10);
+        }
+    }
+
+    function countdown(seconds) {
+        const message = document.getElementById("message");
+        let count = seconds;
+
+        const interval = setInterval(() => {
+            message.textContent = `Wrong username or password. : ${count} seconds.`;
+            count--;
+
+            if (count < 0) {
+                clearInterval(interval);
+                message.classList.add("hidden");
+            }
+        }, 1000);
+    }
+</script>
+
+
+
+</body>
+</html>
